@@ -1,0 +1,119 @@
+@charset "utf-8";
+@font-face {
+    font-family: font1 ;
+    src: url(fontes/Pavelt.ttf);
+}
+
+header h1{
+    font-family: font1;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(https://s.glbimg.com/es/ge/f/original/2015/06/07/img_2649_1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header{
+    color: rgb(120, 201, 45);
+    text-align: center;
+    font-family: 'Sedgwick Ave Display', cursive;
+    text-shadow: 5px 5px 5px rgb(180, 72, 94);
+}
+
+.container{
+
+    height: 460px;
+    width: 800px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.imagem img{
+    height: 100%;
+    width: 100%;
+}
+
+.navegacao{
+    position: absolute; /* posição em relação ao container */
+    bottom: 20px; /* distância a partir da base */
+    left: 50%; /* distância a partir da esquerda */
+    transform: translate(-50%); /* alterar o eixo principal */
+    display: flex; /* colocar o conteúdo lado a lado */
+}
+
+.bar{
+    background-color: #4e372d;  /*Plano de fundo do indicador*/
+    width: 30px; /* largura do indicador */
+    height: 5px; /* altura do indicador */
+    margin: 6px; /* espaço entre os indicadores */
+    transition: .3s; /* transição no hover */
+    cursor: not-allowed; /* ponteiro do mouse */
+}
+
+.bar:hover{
+    background-color: #e45b5b80;
+}
+
+input{
+    display: none;
+}
+
+.imagens{
+    display: flex;
+    width: 600%;
+    height: 100%;
+}
+
+.imagem{
+    width: 16.6666666667%;
+    transition: .5s;
+}
+.imagem img{
+    border-radius: 50px;
+    height: 100%;
+    width: 100%;
+}
+
+#imagem1:checked ~ .img1{
+    margin-left: 0; /* alteração na margem esquerda */
+}
+
+#imagem2:checked ~ .img1 {
+    margin-left: -16.6666666667% ;
+}
+
+#imagem3:checked ~ .img1 {
+    margin-left: -33.3333333333%; ;
+}
+
+#imagem4:checked ~ .img1 {
+    margin-left:  -50%;
+}
+
+#imagem5:checked ~ .img1 {
+    margin-left: -66.6666666667%;
+}
+
+#imagem6:checked ~ .img1 {
+    margin-left: -83.3333333333% ;
+}
+
+
+footer{
+    bottom: 0;
+    position: absolute;
+    left: 50%;
+    transform:translate(-50%);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(39, 1, 1);
+    text-shadow: 5px 5px 5px rgb(253, 170, 170);
+}
